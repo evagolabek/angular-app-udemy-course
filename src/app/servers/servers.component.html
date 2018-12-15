@@ -1,3 +1,12 @@
+
+<!-- ****$event**** is reserved variable name you can use in the template when using event binding, gives us access to event data-->
+<label>Server Name</label>
+<input 
+type="text"
+class="form-control"
+(input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
+
 <!-- enclosing 'disabled' in [] means we directly binding property i.e. this native element property to our own ts property 'allowNewServer'
 , disabled needs true or false which exactly what allowNewServer results in-->
 
