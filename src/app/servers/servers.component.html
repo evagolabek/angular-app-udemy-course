@@ -1,12 +1,15 @@
 <!-- enclosing 'disabled' in [] means we directly binding property i.e. this native element property to our own ts property 'allowNewServer'
 , disabled needs true or false which exactly what allowNewServer results in-->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+
+<!-- event click calls the onCreateServer method -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
 
 <!-- you can also output the true or false in the string interpolation bc boolean is cast into a string -->
-<p>{{allowNewServer}}</p>
+<!-- <p>{{allowNewServer}}</p> -->
 
 <!-- property binding -->
 <!-- <p[innerText]="allowNewServer"></p> -->
 
+<p> {{ serverCreationStatus }}</p>
 <app-server></app-server>
 
