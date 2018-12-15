@@ -1,1 +1,7 @@
-<p>hello from the server</p>
+<!-- get everything with string interpolation -->
+<p>{{'server'}} server with ID {{serverId}} is {{serverStatus}} </p>
+
+<!-- get serverStatus from the method -->
+<p>{{'server'}}server with ID {{serverId}} is {{ getServerStatus() }} </p>
+
+<!-- string interpolation - any expression which can be solved to a string in the end, that is the only condition, ..you can call a method that returns a string, you can use ternery expression -->
