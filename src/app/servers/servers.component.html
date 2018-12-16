@@ -31,7 +31,14 @@ class="form-control"
 
 <!-- *ngIf is structural directives which means it changes the structure of the DOM, it either adds this element or it doesn't -->
 
-<p *ngIf="serverCreated">server was created, server the new name is {{ serverName}}</p>
+<!-- preferably version "!serverCreated = else noServer" -->
+<p *ngIf="serverCreated; else noServer">server was created, server the new name is {{ serverName}}</p>
+
+<!-- using LOCAL REFERENCE (marker) and ng-template for ngIf/else showing conditionally -->
+<ng-template #noServer>
+  <p>No server was created
+  </p>
+  </ng-template>
 <!-- <p> {{ serverCreationStatus }}</p> -->
 <app-server></app-server>
 
