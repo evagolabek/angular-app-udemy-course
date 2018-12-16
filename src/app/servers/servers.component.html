@@ -25,6 +25,13 @@ class="form-control"
 <!-- property binding -->
 <!-- <p[innerText]="allowNewServer"></p> -->
 
-<p> {{ serverCreationStatus }}</p>
+<!-- DIRECTIVES -->
+
+<!-- directives are added by using attribute selector -->
+
+<!-- *ngIf is structural directives which means it changes the structure of the DOM, it either adds this element or it doesn't -->
+
+<p *ngIf="serverCreated">server was created, server the new name is {{ serverName}}</p>
+<!-- <p> {{ serverCreationStatus }}</p> -->
 <app-server></app-server>
 
