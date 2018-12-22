@@ -9,6 +9,11 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { UsernameComponent } from './username/username.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './reducers/tutorial.reducer';
+import { ReadComponent } from './read/read.component';
+import { CreateComponent } from './create/create.component';
+
 
 
 @NgModule({
@@ -18,11 +23,16 @@ import { UsernameComponent } from './username/username.component';
     ServersComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
-    UsernameComponent
+    UsernameComponent,
+    ReadComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    StoreModule.forRoot({
+      tutorial: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
