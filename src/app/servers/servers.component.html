@@ -40,5 +40,6 @@ class="form-control"
   </p>
   </ng-template>
 <!-- <p> {{ serverCreationStatus }}</p> -->
-<app-server></app-server>
+<!-- ngFor directive (with the * bc its structural directive - changing the DOM) -->
+<app-server *ngFor="let server of servers"></app-server>
 
