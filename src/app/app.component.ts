@@ -16,6 +16,9 @@ export class AppComponent {
 
   onToggleDetails(){
     this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
+    // this.log.push(this.log.length + 1);
+
+    //this case our check does not work anymore bc string deemed to be true
+    this.log.push(new Date());
   }
 }
