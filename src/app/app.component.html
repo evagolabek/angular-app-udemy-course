@@ -10,6 +10,15 @@
       <!-- 2 <div class="app-servers"></div>  -->
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
+      <hr>
+      <!-- click below is quick and easy toggle example-->
+      <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret ">Display Details</button> -->
+      <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+      <p *ngIf="showSecret">Secret Password = tuna</p>
+      <!-- logic from below could also be put in the ts code inside a method, but it is also possible to have it here-->
+      <div *ngFor = "let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 'blue' : 'transparent'}" [ngClass]="{'white-text': logItem >= 5 }">
+          {{logItem}}
+      </div>
     </div>
   </div>
 </div>
